@@ -8,16 +8,16 @@ use futures::{future::FutureExt, sink::SinkExt, stream::StreamExt};
 use std::collections::HashMap;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 
-#[cfg(not(windows))]
+//#[cfg(not(windows))]
 mod unix_ipc;
-#[cfg(not(windows))]
+//#[cfg(not(windows))]
 use unix_ipc::*;
 
-#[cfg(windows)]
+/* #[cfg(windows)]
 mod win_ipc;
 #[cfg(windows)]
 use win_ipc::*;
-
+ */
 mod low_level;
 pub(crate) use low_level::*;
 
