@@ -21,6 +21,4 @@ pub mod entry;
 
 pub mod actor;
 
-pub mod ipc;
-
 pub mod test;
