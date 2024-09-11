@@ -5,11 +5,9 @@ CREATE TABLE IF NOT EXISTS lair_keystore (
   -- identity pk
   id INTEGER PRIMARY KEY NOT NULL UNIQUE,
   -- user-defined tag
-  tag TEXT NOT NULL UNIQUE,
-  -- signature public key for indexing
+  tag TEXT NOT NULL UNIQUE,  -- signature public key for indexing
   -- (null for non-seed entries)
-  ed25519_pub_key BLOB NULL UNIQUE,
-  -- encryption public key for indexing
+  ed25519_pub_key BLOB NULL UNIQUE,  -- encryption public key for indexing
   -- (null for non-seed entries)
   x25519_pub_key BLOB NULL UNIQUE,
   -- msgpack encoded entry data
